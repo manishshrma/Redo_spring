@@ -30,22 +30,22 @@ public class TopicController {
     }
 
 
-    @RequestMapping(method = RequestMethod.POST,value = "/addtopic")
-    public ResponseEntity<String> addtopic(HttpServletRequest req) throws IOException {
-
-        // body data
-        String data = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-
-        String topic = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-
-        System.out.println(topic);
-
-        HttpHeaders headers=new HttpHeaders();
-        headers.set("myheaders","myvalue");
-
-//        topicServices.generatetopics(data);
-        return new ResponseEntity<>(data,headers, HttpStatus.ACCEPTED);
-    }
+//    @RequestMapping(method = RequestMethod.POST,value = "/addtopic")
+//    public ResponseEntity<String> addtopic(HttpServletRequest req) throws IOException {
+//
+//        // body data
+//        String data = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+//
+//        String topic = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+//
+//        System.out.println(topic);
+//
+//        HttpHeaders headers=new HttpHeaders();
+//        headers.set("myheaders","myvalue");
+//
+////        topicServices.generatetopics(data);
+//        return new ResponseEntity<>(data,headers, HttpStatus.ACCEPTED);
+//    }
 
     // get topics by id
     @RequestMapping(method = RequestMethod.GET,value = "/topic/{id}")
