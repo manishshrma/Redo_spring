@@ -80,19 +80,21 @@ public class TopicController {
 
     // get topics by id
     @RequestMapping(method = RequestMethod.GET, value = "/topic/{id}")
-    public void topicbyId(@PathVariable String id) {
-        topicServices.gettopicById(id);
+    public Topic topicbyId(@PathVariable String id,HttpServletResponse res) {
+
+        System.out.println("hello");
+         return topicServices.gettopicById(id,res);
     }
 
     // update topic
-    @RequestMapping(method = RequestMethod.PATCH,value = "/updatetopic/{id}")
-    public void updatetopic(@RequestBody Topic topic,@PathVariable String myid)
+    @RequestMapping(method = RequestMethod.PUT,value = "/updatetopic/{id}")
+    public void updatetopic(@RequestBody Topic topic,@PathVariable("id") String myid)
     {
          topicServices.updatetopic(myid,topic);
     }
 // delete the topic
     @RequestMapping(method = RequestMethod.DELETE,value = "/deletetopic/{id}")
-    public void deletetopic(@RequestBody Topic topic, @PathVariable String delid)
+    public void deletetopic(@RequestBody Topic topic, @PathVariable("id") String delid)
     {
         topicServices.deletetopic(delid,topic);
     }
