@@ -1,4 +1,4 @@
-package com.example.redo;
+package com.example.redo.tryout;
 
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import com.fasterxml.jackson.databind.annotation.JsonTypeResolver;

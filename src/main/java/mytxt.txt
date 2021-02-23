@@ -1,0 +1,9 @@
+hibernate doesn't know how to connect to database,so it use dialect to to connect to database.
+in our project,in properties file we used postgresdialect.
+
+Hibernate
+
+Session factory-Read the hibernate config file,create session objects,only created once in ur app.
+session-Wrap a JDBC connection,Main object used to save/retreive objects short lived object.Retreived from session
+Factory.
+

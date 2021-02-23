@@ -1,20 +1,22 @@
-package com.example.redo;
+package com.example.redo.tryout;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class TopicServices {
+
+    @PostConstruct
+   public void init()
+   {
+       System.out.println("init method start.......");
+   }
 
     private List<Topic> mytopics = new ArrayList<>(Arrays.asList());
 
